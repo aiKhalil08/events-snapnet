@@ -41,6 +41,13 @@ const Events: FC<EventsProps> = () => {
         } else return true;
     }); // pets allowed filter
 
+    if (filteredEvents.length === 0) {
+        return (
+            <div className='mt-28 w-full grid place-items-center'>
+                <p>No matching event found.</p>
+            </div>
+        )
+    }
 
     return (
         <section className='p-6'>

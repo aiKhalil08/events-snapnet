@@ -34,7 +34,7 @@ const Events: FC<EventsProps> = () => {
     }
     
     const filteredEvents = events
-    .filter(e => new RegExp(searchTerm).test(e.title)) // search term filter
+    .filter(e => new RegExp(searchTerm, 'i').test(e.title)) // search term filter
     .filter(e => {
         if (isPetsAllowed) {
             return e.petsAllowed === true;
